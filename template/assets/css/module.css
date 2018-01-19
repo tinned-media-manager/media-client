@@ -107,8 +107,9 @@
             width: 100%;
         }
 .image.logo {
-    width: 250px;
+    width: 150px;
     max-width: 100%;
+    max-height: auto;
     height: auto;
 }
 
@@ -297,22 +298,36 @@ ul.recommended, ul.popular{
     width: auto;
     max-height: 20%;
     max-width: 700px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 0px;
     display: inline-block;
     /* border: 1px dotted white; */
 }
 
 li.rec-content, li.pop-content {
     float: left;
+    margin: auto;
+    padding: 1px;
     max-height: 100%;
     height: auto;
-    width: 24%;
+    width: 25%;
     list-style: none;
     /* border: 1px dotted blue; */
 }
 
-li.rec-content, li.pop-content, img {
+li.rec-content, li.pop-content, div, h6 {
+    text-align: center;
+    height: 35px;
+}
+
+li.rec-content, li.pop-content, div, img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     max-width: 100%;
     height: auto;
+    position: center;
 }
 
 /* Table */
