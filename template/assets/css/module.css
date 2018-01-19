@@ -106,6 +106,19 @@
         .image.fit img {
             width: 100%;
         }
+.image.logo {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* search bar */
+#main-search {
+    width: 700px;
+    max-width: 100%;
+    height: 30px;
+}
+    
 
 /* List */
 
@@ -277,6 +290,19 @@ ul {
 
 dl {
     margin: 0 0 2em 0;
+}
+
+ul.recommended, ul.popular{
+    height: 100px;
+    max-width: 100%;
+    display: inline-block;
+}
+
+li.rec-content, li.pop-content {
+    float: left;
+    height: 100px;
+    width: 24%;
+    
 }
 
 /* Table */
@@ -607,4 +633,5 @@ button,
 		-webkit-transform: translateX(0);
 		-ms-transform: translateX(0);
 		transform: translateX(0);
-	}
+    }
+    
