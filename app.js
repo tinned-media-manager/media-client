@@ -1,4 +1,4 @@
-const apiKey = ''
+const apiKey = 'be9741ce0fd78dc79d18817f20b4743b'
 const images_uri = 'http://image.tmdb.org/t/p'
 $.ajax({
     url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=Jack+Reacher`,
