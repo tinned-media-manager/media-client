@@ -107,7 +107,7 @@
             width: 100%;
         }
 .image.logo {
-    width: 300px;
+    width: 250px;
     max-width: 100%;
     height: auto;
 }
@@ -293,16 +293,26 @@ dl {
 }
 
 ul.recommended, ul.popular{
-    height: 100px;
-    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 20%;
+    max-width: 700px;
     display: inline-block;
+    /* border: 1px dotted white; */
 }
 
 li.rec-content, li.pop-content {
     float: left;
-    height: 100px;
+    max-height: 100%;
+    height: auto;
     width: 24%;
-    
+    list-style: none;
+    /* border: 1px dotted blue; */
+}
+
+li.rec-content, li.pop-content, img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Table */
