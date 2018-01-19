@@ -405,7 +405,7 @@ text-align: center;
     -ms-transform: translateY(0);
     transform: translateY(0);
     border: none;
-    bottom: 0;
+    top: 1em;
     color: inherit;
     font-size: 0.8em;
     height: 8.5em;
@@ -423,7 +423,7 @@ text-align: center;
 }
 
     #one .more:after {
-        background-image: url("images/arrow.svg");
+        /* background-image: url("images/arrow.svg"); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
