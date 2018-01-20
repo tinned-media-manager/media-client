@@ -1,6 +1,11 @@
 const images_uri = 'http://image.tmdb.org/t/p'
+const position = ["#recommended0", "#recommended1", "#recommended2", "#recommended3"]
+var recommended = ["ghost-busters", "back-to-the-future", "spaceballs", "the-martian"]
+var popular = ["star-wars-the-last-jedi", "it", "blade-runner-2049", "dunkirk"]
+
+
 $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=ghost-busters`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${recommended[0]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -17,7 +22,7 @@ $.ajax({
   )
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=back-to-the-future`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${recommended[1]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -34,7 +39,7 @@ $.ajax({
   )
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=spaceballs`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${recommended[2]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -51,7 +56,7 @@ $.ajax({
   )
   
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=the-martian`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${recommended[3]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -68,7 +73,7 @@ $.ajax({
   )    
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=star-wars-the-last-jedi`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${popular[0]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -85,7 +90,7 @@ $.ajax({
   )
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=it`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${popular[1]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -102,7 +107,7 @@ $.ajax({
   )  
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=blade-runner-2049`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${popular[2]}`,
     method: 'GET',
     timeout: 2000
   })
@@ -119,7 +124,7 @@ $.ajax({
   )
 
   $.ajax({
-    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=dunkirk`,
+    url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${popular[3]}`,
     method: 'GET',
     timeout: 2000
   })
