@@ -431,7 +431,7 @@ text-align: center;
         content: '';
         display: block;
         height: 1.5em;
-        left: 50%;
+        /* left: 50%; */
         margin: 0 0 0 -0.75em;
         position: absolute;
         width: 1.5em;
