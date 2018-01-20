@@ -76,9 +76,19 @@
 					target: $body,
 					visibleClass: 'is-menu-visible'
 				});
+			$('.search-btn').click( function(e) {
+				$('.page').hide();
+				page('/')
+				$('#search-results').show()
+				document.getElementById("one").style.backgroundColor = "purple";
+				a.menueToggle;
+				return false; 
+				}
+			);
 			$('#sighnup').click( function(e) {
 				$('.page').hide();
 				page('/home/sighnup')
+				document.getElementById("one").style.backgroundColor = "red";
 				a.menueToggle;
 				return false; 
 				}
@@ -86,6 +96,7 @@
 			$('#login').click( function(e) {
 				$('.page').hide();
 				page('/home/login')
+				document.getElementById("one").style.backgroundColor = "blue";
 				a.menueToggle;
 				return false; 
 				}
@@ -93,6 +104,7 @@
 			$('#about-us').click( function(e) {
 				$('.page').hide();
 				page('/home/aboutus')
+				document.getElementById("one").style.backgroundColor = "green";
 				a.menueToggle;
 				return false; 
 				}

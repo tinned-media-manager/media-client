@@ -16,6 +16,9 @@ document.write(`
        <li>
             <a href="#footer" class="scrolly">Contact us</a>
         </li>
+        <li>
+            <a href="#one" class="scrolly search-btn"> Return to Search Results</a>
+        </li>
     </ul>
 </nav>
 `);
