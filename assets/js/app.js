@@ -3,6 +3,7 @@ const position = ["#recommended0", "#recommended1", "#recommended2", "#recommend
 var recommended = ["ghost-busters", "back-to-the-future", "spaceballs", "the-martian"]
 var popular = ["star-wars-the-last-jedi", "it", "blade-runner-2049", "dunkirk"]
 
+
 $.ajax({
     url: `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${recommended[0]}`,
     method: 'GET',

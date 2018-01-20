@@ -1,93 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>My Media DB</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="images/my-media-database.png">
+	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="assets/css/base.css" />
+	<link rel="stylesheet" href="assets/css/layout.css" />
+	<link rel="stylesheet" href="assets/css/module.css" />
+	<link rel="stylesheet" href="assets/css/state.css" />
+	<link rel="stylesheet" href="assets/css/theme.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 
-<body>
-    <nav>
+<body class="landing">
 
-    </nav>
-    <div id="main">
-        <div id="logo">
-            <img id="logo-img" src="img/my-media-database.png">
-        </div>
-        <div id="search-bar">
-            <p>Search bar</p>
-        </div>
-        <div id="recommended">
-            <div class="rec-content">
-                <div id="results"></div>
-            </div>
-            <div class="rec-content">
-                <p>Recommended 2</p>
-            </div>
-            <div class="rec-content">
-                <p>Recommended 3</p>
-            </div>
-            <div class="rec-content">
-                <p>Recommended 4</p>
-            </div>
-        </div>
-        <div id="popular">
-            <div class="pop-content">
-                <p>Popular 1</p>
-            </div>
-            <div class="pop-content">
-                <p>Popular 2</p>
-            </div>
-            <div class="pop-content">
-                <p>Popular 3</P>
-            </div>
-            <div class="pop-content">
-                <p>Popular 4</p>
-            </div>
-        </div>
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
 
-    </div>
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1>
+				<a href="index.html">My Media Database</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li class="special">
+						<a href="#menu" class="menuToggle">
+							<span>Menu</span>
+						</a>
+						<div id="menu">
+							<script src="assets/js/menue.js"></script>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-    <script src="app.js"></script>
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<div>
+					<img id="logo-img" class="image logo" src="images/my-media-database.png">
+				</div>
+				<input type="text" id="main-search" placeholder="Search..">
+				<ul class="actions">
+					<li>
+						<a href="#one" class="button special scrolly">Search</a>
+					</li>
+				</ul>
+				<ul class="recommended">
+					<li class="rec-content">
+						<div id="recommended01"></div>
+					</li>
+					<li class="rec-content">
+						<div id="recommended02"></div>
+					</li>
+					<li class="rec-content">
+						<div id="recommended03"></div>
+					</li>
+					<li class="rec-content">
+						<div id="recommended04"></div>
+					</li>
+				</ul>
+				<br>
+				<ul class="popular">
+					<li class="pop-content">
+						<div id="popular01"></div>
+					</li>
+					<li class="pop-content">
+						<div id="popular02"></div>
+					</li>
+					<li class="pop-content">
+						<div id="popular03"></div>
+					</li>
+					<li class="pop-content">
+						<div id="popular04"></div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style1 special">
+			<a href="#banner" class="more scrolly">Return to Search</a>
+			<div class="inner">
+				<nav>
+					<ul>
+						<a href="/">Search Results</a>
+					</ul>
+					<ul>
+						<a href="/home/link1">Media Details</a>
+					</ul>
+					<ul>
+						<a href="/home/link2">Media Related Content</a>
+					</ul>
+				</nav>
+
+				<section id="search-results" class="page">
+					<h4>Search results page.</h4>
+				</section>
+				<section id="media-details" class="page">
+					<h4>Media details page.</h4>
+				</section>
+				<section id="related-content" class="page">
+					<h4>Related content page.</h4>
+				</section>
+				<section id="sighnup" class="page">
+					<h4>sighn up page.</h4>
+				</section>
+				<section id="login" class="page">
+					<h4>login page.</h4>
+				</section>
+				<section id="about-us" class="page">
+					<h4>About us.</h4>
+				</section>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<script src="assets/js/footer.js"></script>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/apikey.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/page.js"></script>
+	<script src="assets/js/routes.js"></script>
+
 </body>
-<footer id="footer">
-    <ul class="icons">
-        <li>
-            <a href="https://twitter.com/" class="icon fa-twitter">
-                <span class="label">Twitter</span>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/" class="icon fa-facebook">
-                <span class="label">Facebook</span>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/?hl=en" class="icon fa-instagram">
-                <span class="label">Instagram</span>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/my-media-db" class="icon fa-github">
-                <span class="label">Github</span>
-            </a>
-        </li>
-        <li>
-            <a href="mailto:example@email.com" class="icon fa-envelope-o">
-                <span class="label">Email</span>
-            </a>
-        </li>
-    </ul>
-    <ul class="copyright">
-        <li>&copy; Untitled</li>
-        <li>Design:
-            <a href="http://html5up.net">HTML5 UP</a>
-        </li>
-    </ul>
-</footer>
 
 </html>

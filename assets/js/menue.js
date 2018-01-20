@@ -3,12 +3,15 @@ document.write(`
     <li>
         <a href="#banner" class="scrolly">Home</a>
     </li>
+
     <li>
-        <a href="#">Sign Up</a>
+        <a href="#sighnup">Sign Up</a>
     </li>
+
     <li>
-        <a href="#">Log In</a>
+        <a href="#login">Log In</a>
     </li>
+
     <li>
         <a href="#one" class="scrolly">About us</a>
     </li>
