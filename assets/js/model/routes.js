@@ -8,29 +8,29 @@ page('/', () => {
     $('#search-results').show()
 })
 
-page('/home/link1', (ctx) => {
+page('/home/details', (ctx) => {
     console.log('Media Details was clicked')
     $('#media-details').show()
 })
 
-page('/home/link2', () => {
+page('/home/related', () => {
     console.log('Related Content was clicked')
     $('#related-content').show()
 })
 
-page('#sighnup', () => {
+page('/home/sighnup', () => {
     console.log('Sighn up was clicked')
-    $('#sighnup').show()
+    $('.sighnup').show()
 })
 
-page('/home/link4', () => {
+page('/home/login', () => {
     console.log('Login was clicked')
-    $('#login').show()
+    $('.login').show()
 })
 
-page('/home/link5', () => {
+page('/home/aboutus', () => {
     console.log('About us was clicked')
-    $('#about-us').show()
+    $('.about-us').show()
 })
 
-page.start()
+page()

@@ -76,6 +76,27 @@
 					target: $body,
 					visibleClass: 'is-menu-visible'
 				});
+			$('#sighnup').click( function(e) {
+				$('.page').hide();
+				page('/home/sighnup')
+				a.menueToggle;
+				return false; 
+				}
+			);
+			$('#login').click( function(e) {
+				$('.page').hide();
+				page('/home/login')
+				a.menueToggle;
+				return false; 
+				}
+			);
+			$('#about-us').click( function(e) {
+				$('.page').hide();
+				page('/home/aboutus')
+				a.menueToggle;
+				return false; 
+				}
+			);
 
 		// Header.
 			if (skel.vars.IEVersion < 9)
