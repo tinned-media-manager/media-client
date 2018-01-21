@@ -59,7 +59,7 @@
 					</li>
 				</ul>
 				<ul class="recommended">
-					<li class="rec-content">
+					<!-- <li class="rec-content">
 						<div id="recommended01"></div>
 					</li>
 					<li class="rec-content">
@@ -70,7 +70,7 @@
 					</li>
 					<li class="rec-content">
 						<div id="recommended04"></div>
-					</li>
+					</li> -->
 				</ul>
 				<br>
 				<ul class="popular">
@@ -140,8 +140,14 @@
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="assets/js/controller/main.js"></script>
 	<script src="assets/js/apikey.js"></script>
-	<script src="assets/js/controller/app.js"></script>
+	<!-- <script src="assets/js/controller/app.js"></script> -->
 	<script src="assets/js/model/routes.js"></script>
+	<script src="assets/js/model/movies.js"></script>
+	<script src="assets/js/view/home-view.js"></script>
+	<script src="assets/js/view/home-view-2.js"></script>
+
+	<script>app.Movie.getRecommend();</script>
+	<script>app.Movie.getPopular();</script>
 
 </body>
 
