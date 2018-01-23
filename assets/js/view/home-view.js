@@ -19,14 +19,16 @@ var app = app || {};
             console.log(movie);
  
             $('.recommended').append(`
-            <li class="rec-content" data-id="${movie.id}"> <h6>${movie.title}</h6><img src="${images_uri}${img_size}${movie.poster_path}"></li>
+            <li class="rec-content" data-id="${movie.id}"> <h6 data-id="${movie.id}">${movie.title}</h6><img data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}"></li>
             `)
         })
  
-      $('.recommended').on('click', 'li', (event) => {
+      $('.rec-content').on('click','img, h6',(event) => {
+        console.log(event.target);
 
-        const id = $(event.target).data('id')
-        page('/api/movies/one/' + id)
+        let id = $(event.target).data('id')
+        console.log(id, 'this is the id');
+        page('/home/details/' + id)
 
     })    
 

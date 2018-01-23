@@ -4,9 +4,9 @@ var app = app || {};
 
 (function(module) {
 
-  const api_url = 'http://mhzsys.net:21010/api'; // remote
+  // const api_url = 'http://mhzsys.net:21010/api'; // remote
   // const api_url = 'http://192.168.1.10:3000/api'; // remote nick
-  // const api_url = 'http://localhost:3000/api'; // local
+  const api_url = 'http://localhost:3000/api'; // local
 
 
   function Movie() {
@@ -28,7 +28,10 @@ var app = app || {};
   };
 
   Movie.getOne = (id) => {
-    return $.getJSON(`${api_url}api/movies/one/${id}`).catch(err => console.error(err));
+    return $.getJSON(`${api_url}/movies/one/${id}`).then(data => {
+      app.detailView.init(data)
+      console.log(data, 'get one data')
+    }).catch(err => console.error(err));
   };
 
   Movie.searchAll = (title) => {

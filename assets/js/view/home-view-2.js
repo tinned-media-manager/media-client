@@ -19,14 +19,15 @@ var app = app || {};
             console.log(movie);
  
             $('.popular').append(`
-            <li class="pop-content" data-id="${movie.id}"> <h6>${movie.title}</h6><img src="${images_uri}${img_size}${movie.poster_path}"></li>
+            <li class="pop-content" data-id="${movie.id}"> <h6 data-id="${movie.id}">${movie.title}</h6><img data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}"></li>
             `)
         })
  
-      $('.popular').on('click', 'li', (event) => {
+      $('.pop-content').on('click','img, h6', (event) => {
 
         const id = $(event.target).data('id')
-        page('/api/movies/one/' + id)
+        console.log(id, 'this is the id');
+        page('/home/details/' + id)
 
     })    
 
