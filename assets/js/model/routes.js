@@ -16,7 +16,10 @@ page('/home/details/:id', (ctx) => {
     $('#media-details').show()
 })
 
-page('/home/related', () => {
+page('/home/related', (ctx) => {
+    app.Movie.getOne(ctx.params.id).then(movie => {
+        app.detailView.init(movie)
+    })
     console.log('Related Content was clicked')
     $('#related-content').show()
 })

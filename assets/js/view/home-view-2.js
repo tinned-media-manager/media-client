@@ -12,7 +12,7 @@ var app = app || {};
 
   homeViewTwo.init = (Movie) => {
 
-    // $('.page').hide()
+    $('.page').hide()
     $('.popular').empty()
     Movie.forEach(movie=> {
       console.log(movie);

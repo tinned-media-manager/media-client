@@ -9,7 +9,7 @@ var app = app || {};
   const img_size = '/w300_and_h450_bestv2';
 
   searchView.init = (movies) => {
-    // $('.page').hide();
+    $('.page').hide();
     $('#search-results').append('<div class="search-results"></div>');
 
     movies.forEach(movie => {
