@@ -91,6 +91,19 @@
 				}
 			);
 
+			//fix this later
+
+
+			// $('.rec-content').click( function(event) {
+			// 	$('.page').hide();
+			// 	event.preventDefault();
+			// 	page(`/home/details/${$(event.target).data('id')}`)
+			// 	$('#media-details').show()
+			// 	document.getElementById("one").style.backgroundColor = "purple";
+			// 	a.menueToggle;
+			// 	return false; 
+		
+
 			$('#main-search').keyup(event => {
 				event.preventDefault()
 				if(event.keyCode === 13) {
