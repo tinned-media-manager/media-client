@@ -18,10 +18,7 @@ var app = app || {};
         
         $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.overview}:<img src="${images_uri}${img_size}${movie.poster_path}">`)
 
-        // </h1> <button id="update-book" data-id="book_id">update</button> <button id="delete-book" data-id="book_id">delete</button>
-        // $('#update-book').on('click', () => app.Book.update (book, app.bookUpdateView.init))
-
-        // $('#delete-book').on('click', )
+        
 
         $view.show()
     }
