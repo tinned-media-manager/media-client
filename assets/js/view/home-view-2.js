@@ -23,7 +23,7 @@ var app = app || {};
     })
 
     $('.pop-content').on('click','img, h6', (event) => {
-
+      document.getElementById('one').scrollIntoView({behavior: 'smooth', block: 'start'})
       const id = $(event.target).data('id')
       console.log(id, 'this is the id');
       page('/home/details/' + id)

@@ -24,7 +24,7 @@ var app = app || {};
 
     $('.rec-content').on('click','img, h6',(event) => {
       console.log(event.target);
-
+      document.getElementById('one').scrollIntoView({behavior: 'smooth', block: 'start'})
       let id = $(event.target).data('id')
       console.log(id, 'this is the id');
       page('/home/details/' + id)
