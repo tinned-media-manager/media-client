@@ -78,6 +78,11 @@
 				});
 			$('.search-btn').click( function(e) {
 				$('.page').hide();
+				e.preventDefault();
+        $('.search-results').remove();
+        let titleSearch = $('#main-search').val();
+        let urlTitle = titleSearch.split(' ').join('+');
+        app.Movie.searchAll(urlTitle);
 				page('/')
 				$('#search-results').show()
 				document.getElementById("one").style.backgroundColor = "purple";
@@ -85,6 +90,15 @@
 				return false; 
 				}
 			);
+
+			$('#main-search').keyup(event => {
+				event.preventDefault()
+				if(event.keyCode === 13) {
+					// event.preventDefault()
+					$('.search-btn').click();
+				}
+			});
+
 			$('#sighnup').click( function(e) {
 				$('.page').hide();
 				page('/home/sighnup')

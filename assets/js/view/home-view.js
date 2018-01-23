@@ -2,15 +2,20 @@ var app = app || {};
 
 (module => {
 
-    const homeView = {}
-    const images_uri = 'http://image.tmdb.org/t/p'
-    const img_size = '/w300_and_h450_bestv2'
+  const homeView = {}
+  const images_uri = 'http://image.tmdb.org/t/p'
+  const img_size = '/w300_and_h450_bestv2'
 
-    const $view = $('.recommended')
+  const $view = $('.recommended')
 
+  homeView.init = (Movie) => {
 
+    $('.page').hide()
 
-    homeView.init = (Movie) => {
+    $('.recommended').empty()
+    Movie.forEach(movie=> {
+      console.log(movie);
+
 
         $('.page').hide()
        
@@ -30,12 +35,15 @@ var app = app || {};
         console.log(id, 'this is the id');
         page('/home/details/' + id)
 
-    })    
+
+    $('.recommended').on('click', 'li', (event) => {
+      const id = $(event.target).data('id')
+      page('/api/movies/one/' + id)
+    })
 
     $view.show()
+  }
 
-    }
-    
-    module.homeView = homeView
+  module.homeView = homeView
 
 }) (app)
