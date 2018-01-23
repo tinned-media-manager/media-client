@@ -17,6 +17,7 @@ var app = app || {};
 
 
     $view.append(`
+    <a href="/home/related">Media Related Content</a>
     <img id="poster" class="details" src="${images_uri}${img_size}${movie.poster_path}">
     <h1 id="title" class="details">${movie.title}</h1><br>
     <h1 class="details">Released: ${movie.release_date}</h1><br>
