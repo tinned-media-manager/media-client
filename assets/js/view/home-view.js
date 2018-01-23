@@ -21,15 +21,16 @@ var app = app || {};
         `)
     })
 
-    $('#main-search').keypress(event => {
-      if(event.which === 13) {
-        event.preventDefault();
-        $('.search-results').remove();
-        let titleSearch = $('#main-search').val();
-        let urlTitle = titleSearch.split(' ').join('+');
-        app.Movie.searchAll(urlTitle);
-      }
-    })
+    // $('#main-search').keypress(event => {
+    //   event.preventDefault()
+    //   if(event.which === 13) {
+    //     $('.search-results').remove()
+    //     let titleSearch = $('#main-search').val()
+    //     let urlTitle = titleSearch.split(' ').join('+')
+    //     app.Movie.searchAll(urlTitle)
+    //     page('/')
+    //   }
+    // })
 
     $('.recommended').on('click', 'li', (event) => {
       const id = $(event.target).data('id')
