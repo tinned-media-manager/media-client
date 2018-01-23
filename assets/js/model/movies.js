@@ -4,9 +4,9 @@ var app = app || {};
 
 (function(module) {
 
-  // const api_url = 'http://mhzsys.net:21010/api'; // remote
+  const api_url = 'http://mhzsys.net:21010/api'; // remote
   // const api_url = 'http://192.168.1.10:3000/api'; // remote nick
-  const api_url = 'http://localhost:3000/api'; // local
+  // const api_url = 'http://localhost:3000/api'; // local
 
 
   function Movie() {
