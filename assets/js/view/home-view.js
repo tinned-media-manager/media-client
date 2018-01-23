@@ -16,21 +16,25 @@ var app = app || {};
     Movie.forEach(movie=> {
       console.log(movie);
 
-      $('.recommended').append(`
-        <li class="rec-content" data-id="${movie.id}"> <h6>${movie.title}</h6><img src="${images_uri}${img_size}${movie.poster_path}"></li>
-        `)
-    })
 
-    // $('#main-search').keypress(event => {
-    //   event.preventDefault()
-    //   if(event.which === 13) {
-    //     $('.search-results').remove()
-    //     let titleSearch = $('#main-search').val()
-    //     let urlTitle = titleSearch.split(' ').join('+')
-    //     app.Movie.searchAll(urlTitle)
-    //     page('/')
-    //   }
-    // })
+        $('.page').hide()
+       
+        $('.recommended').empty()
+        Movie.forEach(movie=> {
+            console.log(movie);
+ 
+            $('.recommended').append(`
+            <li class="rec-content" data-id="${movie.id}"> <h6 data-id="${movie.id}">${movie.title}</h6><img data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}"></li>
+            `)
+        })
+ 
+      $('.rec-content').on('click','img, h6',(event) => {
+        console.log(event.target);
+
+        let id = $(event.target).data('id')
+        console.log(id, 'this is the id');
+        page('/home/details/' + id)
+
 
     $('.recommended').on('click', 'li', (event) => {
       const id = $(event.target).data('id')

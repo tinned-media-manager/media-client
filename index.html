@@ -58,7 +58,7 @@
 						
 					</li>
 				</ul>
-				<ul class="recommended">
+				<ul class="recommended" id="rec-list">
 					<!-- <li class="rec-content">
 						<div id="recommended01"></div>
 					</li>
@@ -74,7 +74,7 @@
 				</ul>
 				<br>
 				<ul class="popular">
-					<li class="pop-content">
+					<!-- <li class="pop-content">
 						<div id="popular01"></div>
 					</li>
 					<li class="pop-content">
@@ -85,7 +85,7 @@
 					</li>
 					<li class="pop-content">
 						<div id="popular04"></div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</section>
@@ -96,8 +96,8 @@
 			<div>
 				<nav>
 					<ul>
-						<a href="/home/details">Media Details</a>
-						<a href="/home/related">Media Related Content</a>
+						
+						
 					</ul>
 				</nav>
 				
@@ -105,10 +105,12 @@
 					<h4>Search results page.</h4>
 				</section>
 				<section id="media-details" class="page">
-					<h4>Media details page.</h4>
+					<h4 id="details">Media details page.</h4>
+					<a href="/home/related">Media Related Content</a>
 				</section>
 				<section id="related-content" class="page">
 					<h4>Related content page.</h4>
+					<a href="/home/details">Media Details</a>
 				</section>
 				<section class="page sighnup">
 					<h4>sighn up page.</h4>
@@ -145,10 +147,16 @@
 	<script src="assets/js/model/movies.js"></script>
 	<script src="assets/js/view/home-view.js"></script>
 	<script src="assets/js/view/home-view-2.js"></script>
+
+	<script src="assets/js/view/details-view.js"></script>
+
+
 	<script src="assets/js/view/search-view.js"></script>
 	
+
 	<script>app.Movie.getRecommend();</script>
 	<script>app.Movie.getPopular();</script>
+	<script>app.Movie.getOne();</script>
 
 </body>
 

@@ -8,7 +8,10 @@ page('/', () => {
     $('#search-results').show()
 })
 
-page('/home/details', (ctx) => {
+page('/home/details/:id', (ctx) => {
+    app.Movie.getOne(ctx.params.id).then(movie => {
+        app.detailView.init(movie)
+    })
     console.log('Media Details was clicked')
     $('#media-details').show()
 })
