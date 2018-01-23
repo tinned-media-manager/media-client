@@ -18,7 +18,7 @@ page('/home/details/:id', (ctx) => {
 
 page('/home/related', (ctx) => {
     app.Movie.getOne(ctx.params.id).then(movie => {
-        app.detailView.init(movie)
+        app.relatedView.init(movie)
     })
     console.log('Related Content was clicked')
     $('#related-content').show()

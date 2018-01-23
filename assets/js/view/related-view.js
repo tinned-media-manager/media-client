@@ -12,11 +12,11 @@ var app = app || {};
   relatedView.init = (movie) => {
 
 
-    $('.page').hide()
+    // $('.page').hide()
     $('#related-content').empty()
 
 
-    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.overview}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
+    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.videos}:${movie.budget}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
 
 
 

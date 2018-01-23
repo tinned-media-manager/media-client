@@ -10,8 +10,8 @@ var app = app || {};
 
   searchView.init = (movies) => {
 
-    $('#search-results').empty()
     // $('.page').hide();
+    $('#search-results').empty()
     $('#search-results').append('<ul class="search-results"></ul>');
 
 
