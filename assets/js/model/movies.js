@@ -16,14 +16,14 @@ var app = app || {};
   Movie.getPopular = () => {
     return $.getJSON(`${api_url}/movies/popular`).then(data => {
       app.homeViewTwo.init(data);
-      console.log(data, 'got your popular data');
+      // console.log(data, 'got your popular data');
     }).catch(err => console.error(err));
   };
 
   Movie.getRecommend = () => {
     return $.getJSON(`${api_url}/movies/recommend`).then(data => {
       app.homeView.init(data);
-      console.log(data, 'got your recommended');
+      // console.log(data, 'got your recommended');
     }).catch(err => console.error(err));
   };
 

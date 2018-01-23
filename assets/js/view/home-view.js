@@ -12,7 +12,7 @@ var app = app || {};
 
   homeView.init = (Movie) => {
 
-    // $('.page').hide()    
+    $('.page').hide()  
     $('.recommended').empty()
     Movie.forEach(movie=> {
       console.log(movie);

@@ -9,9 +9,11 @@ var app = app || {};
   const img_size = '/w300_and_h450_bestv2';
 
   searchView.init = (movies) => {
+
     $('#search-results').empty()
     // $('.page').hide();
     $('#search-results').append('<ul class="search-results"></ul>');
+
 
     movies.forEach(movie => {
       if (movie.poster_path) {
