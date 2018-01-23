@@ -416,8 +416,8 @@ text-align: center;
     outline: 0;
     padding-left: 0.225em;
     position: absolute;
-    text-align: center;
-    text-transform: uppercase;
+    text-align: left;
+    
     width: 16em;
     z-index: 1;
 }
@@ -505,6 +505,50 @@ opacity: 0;
 
 body.is-loading #one:after {
 opacity: 1;
+}
+
+/* Details View */
+
+#media-details {
+    display: inline-block;
+    position: absolute;
+    left: 0%;
+    top: 5%;
+}
+
+#poster {
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 25%;
+    height: auto;
+    border: 1px solid black;
+}
+
+#title {
+    margin-top: 2%;
+    font-size: 3em;
+}
+
+/* Search View */
+
+.search-results {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    padding: 1px;
+    left: 0%;
+    top: 5%;
+    float: left;
+    list-style: none;
+}
+
+#search-thumb {
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 15%;
+    height: auto;
+    border: 1px solid black; 
 }
 
 /* Main */

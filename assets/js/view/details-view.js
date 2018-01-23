@@ -16,7 +16,12 @@ var app = app || {};
     $('#media-details').empty()
 
 
-    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.overview}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
+    $view.append(`
+    <img id="poster" class="details" src="${images_uri}${img_size}${movie.poster_path}">
+    <h1 id="title" class="details">${movie.title}</h1><br>
+    <h1 class="details">Released: ${movie.release_date}</h1><br>
+    <p class="details">${movie.overview}</p>
+    `)
 
 
 
