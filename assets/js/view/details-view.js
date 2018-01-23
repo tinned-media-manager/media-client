@@ -12,11 +12,11 @@ var app = app || {};
   detailView.init = (movie) => {
 
 
-    $('.page').hide()
+    // $('.page').hide()
     $('#media-details').empty()
 
 
-    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.overview}:<img src="${images_uri}${img_size}${movie.poster_path}">`)
+    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.overview}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
 
 
 
