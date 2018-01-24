@@ -16,11 +16,15 @@ var app = app || {};
     $('#related-content').empty()
 
 
-    $view.append(`<a data-id="${movie.id}" href="/home/details">Media Details</a>
-    <h1>${movie.title}: ${movie.release_date}:${movie.videos}:${movie.budget}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
+    $view.append(`<h2 data-id="${movie.id}">Back to Details</h2>
+    <img src="${images_uri}${img_size}${movie.poster_path}">
+    <h1>${movie.title}</h1><br>
+    <h1>${movie.release_date}</h1><br>
+    <h1>${movie.videos}:${movie.budget}</h1>
+    `)
 
 
-    $('#related-content').on('click','a', (event) => {
+    $('#related-content').on('click','h2', (event) => {
 
       const id = $(event.target).data('id')
       console.log(id, 'this is the id');
