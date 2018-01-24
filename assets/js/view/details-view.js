@@ -11,6 +11,9 @@ var app = app || {};
 
   detailView.init = (movie) => {
 
+    console.log(movie.images.backdrops[0].file_path);
+    // movie.images.backdrops[0]
+
 
     // $('.page').hide()
     $('#media-details').empty()
@@ -20,6 +23,7 @@ var app = app || {};
     <img id="poster" class="details" data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}">
     <h1 id="title" class="details" data-id="${movie.id}">${movie.title}</h1><br>
     <h1 class="details" data-id="${movie.id}">Released: ${movie.release_date}</h1><br>
+    <h1> rating ${movie.vote_average}</h1>
     <p class="details" data-id="${movie.id}">${movie.overview}</p>
     `)
 
