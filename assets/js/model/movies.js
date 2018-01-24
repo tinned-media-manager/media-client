@@ -36,6 +36,17 @@ var app = app || {};
 
   };
 
+  Movie.getRelated = (id) => {
+
+    return $.getJSON(`${api_url}/movies/one/${id}`).then(data => {
+      app.relatedView.init(data)
+      console.log(data, 'get related data')
+    }).catch(err => console.error(err));
+
+  };
+
+
+
   Movie.searchAll = (title) => {
     return $.getJSON(`${api_url}/movies/${title}`).then(data => {
       console.log(data, 'got search results');
