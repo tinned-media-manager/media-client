@@ -28,7 +28,7 @@ var app = app || {};
       console.log(id, 'this is the id');
       page('/home/details/' + id)
 
-    })   
+    })
 
     $view.show()
 
