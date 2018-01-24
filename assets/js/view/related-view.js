@@ -16,9 +16,17 @@ var app = app || {};
     $('#related-content').empty()
 
 
-    $view.append(`<h1>${movie.title}: ${movie.release_date}:${movie.videos}:${movie.budget}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
+    $view.append(`<a data-id="${movie.id}" href="/home/details">Media Details</a>
+    <h1>${movie.title}: ${movie.release_date}:${movie.videos}:${movie.budget}</h1>:<img src="${images_uri}${img_size}${movie.poster_path}">`)
 
 
+    $('#related-content').on('click','a', (event) => {
+
+      const id = $(event.target).data('id')
+      console.log(id, 'this is the id');
+      page('/home/details/' + id)
+
+    })
 
     $view.show()
   }
