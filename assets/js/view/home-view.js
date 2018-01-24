@@ -16,29 +16,16 @@ var app = app || {};
     Movie.forEach(movie=> {
       console.log(movie);
 
-
-        $('.page').hide()
-       
-        $('.recommended').empty()
-        Movie.forEach(movie=> {
-            console.log(movie);
- 
-            $('.recommended').append(`
+      $('.recommended').append(`
             <li class="rec-content" data-id="${movie.id}"> <h6 data-id="${movie.id}">${movie.title}</h6><img data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}"></li>
             `)
-        })
- 
-      $('.rec-content').on('click','img, h6',(event) => {
-        console.log(event.target);
+    })
 
-        let id = $(event.target).data('id')
-        console.log(id, 'this is the id');
-        page('/home/details/' + id)
-
-
-    $('.recommended').on('click', 'li', (event) => {
-      const id = $(event.target).data('id')
-      page('/api/movies/one/' + id)
+    $('.rec-content').on('click','img, h6',(event) => {
+      console.log(event.target);
+      let id = $(event.target).data('id')
+      console.log(id, 'this is the id');
+      page('/home/details/' + id)
     })
 
     $view.show()
@@ -46,4 +33,4 @@ var app = app || {};
 
   module.homeView = homeView
 
-}) (app)
+})(app)
