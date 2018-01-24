@@ -24,7 +24,7 @@ var app = app || {};
 
       const id = $(event.target).data('id')
       console.log(id, 'this is the id');
-      page('/home/details/' + id)
+      page('/home/related/' + id)
 
     })
 

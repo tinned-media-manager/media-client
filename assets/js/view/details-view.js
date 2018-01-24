@@ -23,7 +23,7 @@ var app = app || {};
     <p class="details" data-id="${movie.id}">${movie.overview}</p>
     `)
 
-    $('#media-details').on('click','a img, h1 p', (event) => {
+    $('#media-details').on('click','img, h1, p', (event) => {
 
       const id = $(event.target).data('id')
       console.log(id, 'this is the id');
