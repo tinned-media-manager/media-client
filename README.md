@@ -20,6 +20,7 @@ Nick Damberg, Cody Green, Chris Lesesne, and Eric Cobb.
 1/18/2018 6:30pm-9:30pm: Driver Chris Lesesne;
 1/20/2018 9:00am-6:00pm: Self managing/Individule tasks;
 1/22/2018 6:30pm-9:30pm: Self managing/individule tasks;
+1/23/2018 6:30pm-9:30pm: Self managing/individule tasks;
 
 ## Credits and Collaborations
 Special thanks to...
