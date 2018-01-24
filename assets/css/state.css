@@ -337,6 +337,7 @@ min-height: 35em;
 overflow: hidden;
 position: relative;
 text-align: center;
+padding-top: 10%;
 }
 #one h2 {
     -moz-transform: scale(1);
