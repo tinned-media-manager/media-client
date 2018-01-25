@@ -144,7 +144,7 @@
 				if (event.keyCode === 13) {
 					$('.search-btn').click();
 				}
-
+			})
 				$window.on('resize', function () { $window.trigger('scroll'); });
 
 				$banner.scrollex({
@@ -160,43 +160,44 @@
 
 		// About us background
 
-		// const $element = $('.mynameisinigomontoya');
-		// 	const imagePath = 'https://webslinger.com.au/pens/mynameisinigomontoya/img';
-		// 	const totalFrames = 239;
-		// 	const animationDuration = 7966.348;
-		// 	const timePerFrame = animationDuration / totalFrames;
-		// 	let timeWhenLastUpdate;
-		// 	let timeFromLastUpdate;
-		// 	let frameNumber = 1;
+		const $element = $('.mynameisinigomontoya');
+			const imagePath = 'https://webslinger.com.au/pens/mynameisinigomontoya/img';
+			const totalFrames = 239;
+			const animationDuration = 7966.348;
+			const timePerFrame = animationDuration / totalFrames;
+			let timeWhenLastUpdate;
+			let timeFromLastUpdate;
+			let frameNumber = 1;
 
 
-		// 	function step(startTime) {
-		// 		if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
-		// 		timeFromLastUpdate = startTime - timeWhenLastUpdate;
-		// 		if (timeFromLastUpdate > timePerFrame) {
-		// 			$element.attr('src', imagePath + `/mynameisinigomontoya_${frameNumber}.jpg`);
-		// 			timeWhenLastUpdate = startTime;
+			function step(startTime) {
+				if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
+				timeFromLastUpdate = startTime - timeWhenLastUpdate;
+				if (timeFromLastUpdate > timePerFrame) {
+					$element.attr('src', imagePath + `/mynameisinigomontoya_${frameNumber}.jpg`);
+					timeWhenLastUpdate = startTime;
 
-		// 			if (frameNumber >= totalFrames) {
-		// 				frameNumber = 1;
-		// 			} else {
-		// 				frameNumber = frameNumber + 1;
-		// 			}
-		// 		}
-		// 		requestAnimationFrame(step);
-		// 	}
+					if (frameNumber >= totalFrames) {
+						frameNumber = 1;
+					} else {
+						frameNumber = frameNumber + 1;
+					}
+				}
+				requestAnimationFrame(step);
+			}
 
-		// 	$(document).ready(() => {
-		// 		for (var i = 1; i < totalFrames + 1; i++) {
-		// 			$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/mynameisinigomontoya_${i}.jpg');"></div>`);
-		// 		}
-		// 	});
+			$(document).ready(() => {
+				for (var i = 1; i < totalFrames + 1; i++) {
+					$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/mynameisinigomontoya_${i}.jpg');"></div>`);
+				}
+			});
 
-		// 	// $(window).on('load', () => {
-		// 	$('#about-us').on('click', () => {
-		// 		// requestAnimationFrame(step);
-		// 		// $('.mynameis_audio')[0].play();
-		// 	});
-		}
+			// $(window).on('load', () => {
+			$('#about-us').on('click', () => {
+				// requestAnimationFrame(step);
+				// $('.mynameis_audio')[0].play();
+			});
+			
+		
 	})
 })(jQuery);
