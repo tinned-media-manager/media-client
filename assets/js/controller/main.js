@@ -77,19 +77,19 @@
 				visibleClass: 'is-menu-visible'
 			});
 		
-		// $('.search-btn').click(function (e) {
-		// 	$('.page').hide();
-		// 	e.preventDefault();
-		// 	$('.search-results').remove();
-		// 	let titleSearch = $('#main-search').val();
-		// 	let urlTitle = titleSearch.split(' ').join('+');
-		// 	app.Movie.searchAll(urlTitle);
-		// 	page('/')
-		// 	$('#search-results').show()
-		// 	document.getElementById("one").style.backgroundColor = "purple";
-		// 	a.menueToggle;
-		// 	return false;
-		// });
+		$('.search-btn').click(function (e) {
+			$('.page').hide();
+			e.preventDefault();
+			$('.search-results').remove();
+			let titleSearch = $('#main-search').val();
+			let urlTitle = titleSearch.split(' ').join('+');
+			app.Movie.searchAll(urlTitle);
+			page('/')
+			$('#search-results').show()
+			document.getElementById("one").style.backgroundColor = "purple";
+			a.menueToggle;
+			return false;
+		});
 
 		$('#main-search').keyup(event => {
 			event.preventDefault()
