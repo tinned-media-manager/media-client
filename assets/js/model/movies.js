@@ -43,8 +43,15 @@ var app = app || {};
     }).catch(err => console.error(err));
   };
 
-  Movie.createUser = (user) => {
-    $.post(`${api_url}/movies/create_user`, user).catch(err => console.error(err));
+  Movie.createUser = (userObj) => {
+    $.post(`http://localhost:3000/user`, {
+      first_name: userObj.firstName,
+      last_name: userObj.lastName,
+      email: userObj.userEmail,
+      db_key: userObj.apiKey,
+      pwd: userObj.password
+    })
+      .catch(err => console.error(err));
   };
 
   module.Movie = Movie;

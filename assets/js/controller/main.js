@@ -107,7 +107,6 @@
 			$('#main-search').keyup(event => {
 				event.preventDefault()
 				if(event.keyCode === 13) {
-					// event.preventDefault()
 					$('.search-btn').click();
 				}
 			});
