@@ -11,19 +11,29 @@ var app = app || {};
 
   detailView.init = (movie) => {
 
+    console.log(movie.images.backdrops[0].file_path);
+    let bgPoster = movie.images.backdrops[0].file_path
+    // movie.images.backdrops[0]
+
 
     // $('.page').hide()
     $('#media-details').empty()
 
 
-    $view.append(`
+    $view.append(`<h2 data-id="${movie.id}">Related Content</h2>
     <img id="poster" class="details" data-id="${movie.id}" src="${images_uri}${img_size}${movie.poster_path}">
     <h1 id="title" class="details" data-id="${movie.id}">${movie.title}</h1><br>
     <h1 class="details" data-id="${movie.id}">Released: ${movie.release_date}</h1><br>
+    <h1> rating ${movie.vote_average}</h1>
     <p class="details" data-id="${movie.id}">${movie.overview}</p>
     `)
-
-    $('#media-details').on('click','img, h1 p', (event) => {
+    
+    // document.getElementById("one").style.backgroundColor = "purple";
+    console.log(`${images_uri}/w300${bgPoster}`);
+    let backDrop = `${images_uri}/w300${bgPoster}`
+    console.log(backDrop);
+    document.getElementById("one").style.backgroundImage = `url(${images_uri}/w300${bgPoster})`;
+    $('#media-details').on('click','h2', (event) => {
 
       const id = $(event.target).data('id')
       console.log(id, 'this is the id');
