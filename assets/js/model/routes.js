@@ -26,6 +26,7 @@ page('/home/related/:id', (ctx) => {
 
 page('/home/sighnup', () => {
     console.log('Sighn up was clicked')
+    app.signUpView.init()
     $('.sighnup').show()
 })
 

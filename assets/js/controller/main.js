@@ -152,6 +152,13 @@
 		if ($banner.length > 0
 			&& $header.hasClass('alt')) {
 
+
+			$('#main-search').keyup(event => {
+				event.preventDefault()
+				if(event.keyCode === 13) {
+					$('.search-btn').click();
+				}
+
 			$window.on('resize', function () { $window.trigger('scroll'); });
 
 			$banner.scrollex({
@@ -159,6 +166,7 @@
 				terminate: function () { $header.removeClass('alt'); },
 				enter: function () { $header.addClass('alt'); },
 				leave: function () { $header.removeClass('alt'); }
+
 			});
 
 		}
