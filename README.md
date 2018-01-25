@@ -18,6 +18,11 @@ Nick Damberg, Cody Green, Chris Lesesne, and Eric Cobb.
 ## Change Log
 1/17/2018 6:30pm-9:30pm: Driver Eric Cobb
 1/18/2018 6:30pm-9:30pm: Driver Chris Lesesne
+1/20/2018 6:30pm-9:30pm: Self managing/individul tasks
+1/22/2018 6:30pm-9:30pm: Self managing/individul tasks
+1/23/2018 6:30pm-9:30pm: Self managing/individul tasks
+1/24/2018 6:30pm-9:30pm: Self managing/individul tasks
+
 
 ## Credits and Collaborations
 Special thanks to...
