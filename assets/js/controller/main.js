@@ -63,7 +63,7 @@
 			});
 
 		// Menu.
-		$('#menu')
+		$('#menu') 
 			.append('<a href="#menu" class="close"></a>')
 			.appendTo($body)
 			.panel({
@@ -76,33 +76,20 @@
 				target: $body,
 				visibleClass: 'is-menu-visible'
 			});
-		$('.search-btn').click(function (e) {
-			$('.page').hide();
-			e.preventDefault();
-			$('.search-results').remove();
-			let titleSearch = $('#main-search').val();
-			let urlTitle = titleSearch.split(' ').join('+');
-			app.Movie.searchAll(urlTitle);
-			page('/')
-			$('#search-results').show()
-			document.getElementById("one").style.backgroundColor = "purple";
-			a.menueToggle;
-			return false;
-		}
-		);
-
-		//fix this later
-
-
-		// $('.rec-content').click( function(event) {
+		
+		// $('.search-btn').click(function (e) {
 		// 	$('.page').hide();
-		// 	event.preventDefault();
-		// 	page(`/home/details/${$(event.target).data('id')}`)
-		// 	$('#media-details').show()
+		// 	e.preventDefault();
+		// 	$('.search-results').remove();
+		// 	let titleSearch = $('#main-search').val();
+		// 	let urlTitle = titleSearch.split(' ').join('+');
+		// 	app.Movie.searchAll(urlTitle);
+		// 	page('/')
+		// 	$('#search-results').show()
 		// 	document.getElementById("one").style.backgroundColor = "purple";
 		// 	a.menueToggle;
-		// 	return false; 
-
+		// 	return false;
+		// });
 
 		$('#main-search').keyup(event => {
 			event.preventDefault()
@@ -120,8 +107,8 @@
 			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
-		}
-		);
+		});
+
 		$('#login').click(function (e) {
 			$('.page').hide();
 			page('/home/login')
@@ -129,20 +116,19 @@
 			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
-		}
-		);
+		});
+
 		$('#about-us').click(function (e) {
 			$('.page').hide();
 			page('/home/aboutus')
 			document.getElementById("one").style.backgroundColor = "green";
 			requestAnimationFrame(step);
-			
+
 			$('.mynameis_audio')[0].play();
 			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
-		}
-		);
+		});
 
 
 		// Header.
@@ -155,65 +141,62 @@
 
 			$('#main-search').keyup(event => {
 				event.preventDefault()
-				if(event.keyCode === 13) {
+				if (event.keyCode === 13) {
 					$('.search-btn').click();
 				}
 
-			$window.on('resize', function () { $window.trigger('scroll'); });
+				$window.on('resize', function () { $window.trigger('scroll'); });
 
-			$banner.scrollex({
-				bottom: $header.outerHeight() + 1,
-				terminate: function () { $header.removeClass('alt'); },
-				enter: function () { $header.addClass('alt'); },
-				leave: function () { $header.removeClass('alt'); }
+				$banner.scrollex({
+					bottom: $header.outerHeight() + 1,
+					terminate: function () { $header.removeClass('alt'); },
+					enter: function () { $header.addClass('alt'); },
+					leave: function () { $header.removeClass('alt'); }
 
-			});
+				});
 
-		}
+			}
 
 
 		// About us background
 
-		const $element = $('.mynameisinigomontoya');
-		const imagePath = 'https://webslinger.com.au/pens/mynameisinigomontoya/img';
-		const totalFrames = 239;
-		const animationDuration = 7966.348;
-		const timePerFrame = animationDuration / totalFrames;
-		let timeWhenLastUpdate;
-		let timeFromLastUpdate;
-		let frameNumber = 1;
+		// const $element = $('.mynameisinigomontoya');
+		// 	const imagePath = 'https://webslinger.com.au/pens/mynameisinigomontoya/img';
+		// 	const totalFrames = 239;
+		// 	const animationDuration = 7966.348;
+		// 	const timePerFrame = animationDuration / totalFrames;
+		// 	let timeWhenLastUpdate;
+		// 	let timeFromLastUpdate;
+		// 	let frameNumber = 1;
 
 
-		function step(startTime) {
-			if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
-			timeFromLastUpdate = startTime - timeWhenLastUpdate;
+		// 	function step(startTime) {
+		// 		if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
+		// 		timeFromLastUpdate = startTime - timeWhenLastUpdate;
+		// 		if (timeFromLastUpdate > timePerFrame) {
+		// 			$element.attr('src', imagePath + `/mynameisinigomontoya_${frameNumber}.jpg`);
+		// 			timeWhenLastUpdate = startTime;
 
-			if (timeFromLastUpdate > timePerFrame) {
-				$element.attr('src', imagePath + `/mynameisinigomontoya_${frameNumber}.jpg`);
-
-				timeWhenLastUpdate = startTime;
-
-				if (frameNumber >= totalFrames) {
-					frameNumber = 1;
-				} else {
-					frameNumber = frameNumber + 1;
-				}
-			}
-			requestAnimationFrame(step);
-		}
-
-		// $(document).ready(() => {
-		// 	for (var i = 1; i < totalFrames + 1; i++) {
-		// 		$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/mynameisinigomontoya_${i}.jpg');"></div>`);
+		// 			if (frameNumber >= totalFrames) {
+		// 				frameNumber = 1;
+		// 			} else {
+		// 				frameNumber = frameNumber + 1;
+		// 			}
+		// 		}
+		// 		requestAnimationFrame(step);
 		// 	}
-		// });
 
-		// $(window).on('load', () => {
-		$('#about-us').on('click', () => {
-			// requestAnimationFrame(step);
-			// $('.mynameis_audio')[0].play();
-		});
+		// 	$(document).ready(() => {
+		// 		for (var i = 1; i < totalFrames + 1; i++) {
+		// 			$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/mynameisinigomontoya_${i}.jpg');"></div>`);
+		// 		}
+		// 	});
 
-
-	});
+		// 	// $(window).on('load', () => {
+		// 	$('#about-us').on('click', () => {
+		// 		// requestAnimationFrame(step);
+		// 		// $('.mynameis_audio')[0].play();
+		// 	});
+		}
+	})
 })(jQuery);
