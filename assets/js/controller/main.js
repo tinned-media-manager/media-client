@@ -5,7 +5,6 @@
 */
 
 (function ($) {
-
 	skel
 		.breakpoints({
 			xlarge: '(max-width: 1680px)',
@@ -205,7 +204,5 @@
 			// requestAnimationFrame(step);
 			// $('.mynameis_audio')[0].play();
 		});
-
-
 	});
 })(jQuery);
