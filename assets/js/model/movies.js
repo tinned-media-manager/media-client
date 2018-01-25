@@ -2,17 +2,17 @@
 
 var app = app || {};
 
-(function(module) {
+(function (module) {
 
   const api_url = 'http://mhzsys.net:21010/api'; // remote
   // const api_url = 'http://192.168.1.10:3000/api'; // remote nick
   // const api_url = 'http://localhost:3000/api'; // local
+  // const api_url = 'http://localhost:3001/api'; // local (Eric's)
 
 
   function Movie() {
 
   }
-
   Movie.getPopular = () => {
     return $.getJSON(`${api_url}/movies/popular`).then(data => {
       app.homeViewTwo.init(data);
