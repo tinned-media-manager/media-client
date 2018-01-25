@@ -110,12 +110,14 @@
 				// event.preventDefault()
 				$('.search-btn').click();
 			}
+			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 		});
 
 		$('#sighnup').click(function (e) {
 			$('.page').hide();
 			page('/home/sighnup')
 			document.getElementById("one").style.backgroundColor = "red";
+			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
 		}
@@ -124,6 +126,7 @@
 			$('.page').hide();
 			page('/home/login')
 			document.getElementById("one").style.backgroundColor = "blue";
+			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
 		}
@@ -132,10 +135,15 @@
 			$('.page').hide();
 			page('/home/aboutus')
 			document.getElementById("one").style.backgroundColor = "green";
+			requestAnimationFrame(step);
+			
+			$('.mynameis_audio')[0].play();
+			// document.getElementById("one").style.backgroundImage = "url('img.png')";
 			a.menueToggle;
 			return false;
 		}
 		);
+
 
 		// Header.
 		if (skel.vars.IEVersion < 9)
@@ -155,6 +163,49 @@
 
 		}
 
-	});
 
+		// About us background
+
+		const $element = $('.mynameisinigomontoya');
+		const imagePath = 'https://webslinger.com.au/pens/mynameisinigomontoya/img';
+		const totalFrames = 239;
+		const animationDuration = 7966.348;
+		const timePerFrame = animationDuration / totalFrames;
+		let timeWhenLastUpdate;
+		let timeFromLastUpdate;
+		let frameNumber = 1;
+
+
+		function step(startTime) {
+			if (!timeWhenLastUpdate) timeWhenLastUpdate = startTime;
+			timeFromLastUpdate = startTime - timeWhenLastUpdate;
+
+			if (timeFromLastUpdate > timePerFrame) {
+				$element.attr('src', imagePath + `/mynameisinigomontoya_${frameNumber}.jpg`);
+
+				timeWhenLastUpdate = startTime;
+
+				if (frameNumber >= totalFrames) {
+					frameNumber = 1;
+				} else {
+					frameNumber = frameNumber + 1;
+				}
+			}
+			requestAnimationFrame(step);
+		}
+
+		// $(document).ready(() => {
+		// 	for (var i = 1; i < totalFrames + 1; i++) {
+		// 		$('body').append(`<div id="preload-image-${i}" style="background-image: url('${imagePath}/mynameisinigomontoya_${i}.jpg');"></div>`);
+		// 	}
+		// });
+
+		// $(window).on('load', () => {
+		$('#about-us').on('click', () => {
+			// requestAnimationFrame(step);
+			// $('.mynameis_audio')[0].play();
+		});
+
+
+	});
 })(jQuery);
