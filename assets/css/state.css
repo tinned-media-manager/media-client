@@ -507,6 +507,19 @@ body.is-loading #one:after {
 opacity: 1;
 }
 
+/* Search View */
+
+.search-results {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    padding: 1px;
+    left: 0%;
+    top: 5%;
+    float: left;
+    list-style: none;
+}
+
 /* Details View */
 
 #media-details {
@@ -530,17 +543,17 @@ opacity: 1;
     font-size: 3em;
 }
 
-/* Search View */
+/* Related View */
 
-.search-results {
+#related-content {
     display: inline-block;
     position: absolute;
-    margin: auto;
-    padding: 1px;
     left: 0%;
     top: 5%;
-    float: left;
-    list-style: none;
+}
+
+#video {
+    float: right;
 }
 
 #search-thumb {
@@ -737,4 +750,21 @@ body.is-mobile.landing .wrapper.style4 {
 
 body.is-mobile.landing #footer {
     background-color: #1d242a;
+}
+
+/* About us background */
+
+body, .movie_title { background-color: #000; }
+/* Adjustment to letterbox format screen ratio */
+.movie_title_frame:after { padding-top: 48.05%; }
+.movie_title {
+  min-width: 280px;
+  min-height: 136px;
+  max-width: 1200px;
+  max-height: 584px;
+}
+.movie_title img.mynameisinigomontoya {
+  top: 0;
+  left: 0;
+  width: 100%;
 }
