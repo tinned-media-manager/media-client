@@ -26,15 +26,17 @@ var app = app || {};
     $('#related-content').empty()
 
 
-    $view.append(`<h2 data-id="${movie.id}">Back to Details</h2>
-    <img src="${images_uri}${img_size}${movie.poster_path}">
-    <h1>${movie.title}</h1><br>
-    <h1>runtime ${movie.runtime} minutes</h1>
-    <h1>release date ${movie.release_date}</h1><br>
-    <h1><a href="${movie.homepage}" target="_blank">Movie Homepage</a></h1>
-    <h1> movie budget $${movie.budget.toLocaleString()}</h1>
-    <h1> revenue $${movie.revenue.toLocaleString()}</h1>
-    <iframe width="854" height="480" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    $view.append(`<h2 class="related align-center" data-id="${movie.id}">Back to Details</h2>
+    <img id="poster" class="related image" src="${images_uri}${img_size}${movie.poster_path}">
+    <h1 id="title" class="related align-center">${movie.title}</h1><br>
+    <div id="info">
+      <h1 class="related">runtime ${movie.runtime} minutes</h1><br>
+      <h1 class="related">release date ${movie.release_date}</h1><br>
+      <h1 class="related"><a href="${movie.homepage}" target="_blank">Movie Homepage</a></h1><br>
+      <h1 class="related"> movie budget $${movie.budget.toLocaleString()}</h1><br>
+      <h1 class="related"> revenue $${movie.revenue.toLocaleString()}</h1><br>
+    </div>
+    <iframe id="video" width="854" height="480" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
  
     `)
     // console.log(movie.videos.results[4].key);
