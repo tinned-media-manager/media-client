@@ -7,6 +7,7 @@ var app = app || {};
   const signUpView = {};
   signUpView.init = function () {
     $('.page').hide();
+    $('#one').css('backgroundImage', 'url()');
     $('input').val('');
     $('#submit').one('click', (event) => {
       event.preventDefault();

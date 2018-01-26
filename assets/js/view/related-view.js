@@ -36,7 +36,9 @@ var app = app || {};
       <h1 class="related"> movie budget $${movie.budget.toLocaleString()}</h1><br>
       <h1 class="related"> revenue $${movie.revenue.toLocaleString()}</h1><br>
     </div>
-    <iframe id="video" width="854" height="480" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="u-tube">
+    <iframe id="video" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+    </div>
  
     `)
     // console.log(movie.videos.results[4].key);
