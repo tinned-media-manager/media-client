@@ -13,10 +13,10 @@ var app = app || {};
 
     console.log(movie.images.backdrops[0].file_path);
     let bgPoster = movie.images.backdrops[0].file_path
-    // movie.images.backdrops[0]
+    
 
 
-    // $('.page').hide()
+    
     $('#media-details').empty()
 
 
@@ -28,7 +28,7 @@ var app = app || {};
     <p class="details" data-id="${movie.id}">${movie.overview}</p>
     `)
     
-    // document.getElementById("one").style.backgroundColor = "purple";
+    
     console.log(`${images_uri}/w300${bgPoster}`);
     let backDrop = `${images_uri}/w300${bgPoster}`
     console.log(backDrop);

@@ -28,6 +28,7 @@ var app = app || {};
 
     $view.append(`<h2 class="related align-center" data-id="${movie.id}">Back to Details</h2>
     <img id="poster" class="related image" src="${images_uri}${img_size}${movie.poster_path}">
+    
     <h1 id="title" class="related align-center">${movie.title}</h1><br>
     <div id="info">
       <h1 class="related">runtime ${movie.runtime} minutes</h1><br>
@@ -36,12 +37,13 @@ var app = app || {};
       <h1 class="related"> movie budget $${movie.budget.toLocaleString()}</h1><br>
       <h1 class="related"> revenue $${movie.revenue.toLocaleString()}</h1><br>
     </div>
+    
     <div id="u-tube">
     <iframe id="video" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
     </div>
  
     `)
-    // console.log(movie.videos.results[4].key);
+    
 
 
     $('#related-content').on('click','h2', (event) => {

@@ -21,7 +21,7 @@ var app = app || {};
 
       console.log(newUser);
       app.Movie.createUser(newUser);
-      // window.location = '../';
+     
     });
   };
 

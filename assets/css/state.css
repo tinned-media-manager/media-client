@@ -334,7 +334,8 @@ justify-content: center;
 cursor: default;
 height: 100vh;
 min-height: 35em;
-overflow: hidden;
+overflow-y: auto;
+/* overflow: hidden; */
 position: relative;
 text-align: center;
 background-repeat: no-repeat;
@@ -463,6 +464,9 @@ background-size: cover;
     top: 0;
     opacity: 0;
 }
+
+
+
 
 #title {
     margin-top: 2%;
