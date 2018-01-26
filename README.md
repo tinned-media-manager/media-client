@@ -27,7 +27,7 @@ This application serves as a media search tool that allows users to search and v
 
 ### Credits/Collaborations
 
-1) The Movie Database API (https://www.themoviedb.org/documentation/api)
-2.) Spectral by HTML5 UP (html5up.net | @ajlkn)
-3.) http://mhzsys.net (Nick Damberg)
-4.) CodeFellows 301 Instructional Team
+1 The Movie Database API (https://www.themoviedb.org/documentation/api)
+2. Spectral by HTML5 UP (html5up.net | @ajlkn)
+3. http://mhzsys.net (Nick Damberg)
+4. CodeFellows 301 Instructional Team
