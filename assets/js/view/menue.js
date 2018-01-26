@@ -5,7 +5,7 @@ document.write(`
             <a href="#banner" class="scrolly">Home</a>
         </li>
         <li>
-            <a id="sighnup" href="#one" class="scrolly">Sighnup Page</a>
+            <a id="sighnup" href="#one" class="scrolly">Sign-Up Page</a>
         </li>
         <li>
             <a id="login" href="#one" class="scrolly">Log In</a>

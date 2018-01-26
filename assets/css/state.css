@@ -337,6 +337,8 @@ min-height: 35em;
 overflow: hidden;
 position: relative;
 text-align: center;
+background-repeat: no-repeat;
+background-size: cover;  
 }
 #one h2 {
     -moz-transform: scale(1);

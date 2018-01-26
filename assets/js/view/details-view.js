@@ -32,7 +32,7 @@ var app = app || {};
     console.log(`${images_uri}/w300${bgPoster}`);
     let backDrop = `${images_uri}/w300${bgPoster}`
     console.log(backDrop);
-    document.getElementById("one").style.backgroundImage = `url(${images_uri}/w300${bgPoster})`;
+    document.getElementById("one").style.backgroundImage = `url(${images_uri}/w600${bgPoster})`;
     $('#media-details').on('click','h2', (event) => {
 
       const id = $(event.target).data('id')
