@@ -22,21 +22,24 @@ var app = app || {};
     console.log(playlist)
 
 
-    // $('.page').hide()
+    $('.page').hide()
+    $('#one').css('overflow-y', 'hidden');
     $('#related-content').empty()
 
 
     $view.append(`<h2 class="related align-center" data-id="${movie.id}">Back to Details</h2>
+    
     <img id="poster" class="related image" src="${images_uri}${img_size}${movie.poster_path}">
     
     <h1 id="title" class="related align-center">${movie.title}</h1><br>
-    <div id="info">
-      <h1 class="related">runtime ${movie.runtime} minutes</h1><br>
-      <h1 class="related">release date ${movie.release_date}</h1><br>
-      <h1 class="related"><a href="${movie.homepage}" target="_blank">Movie Homepage</a></h1><br>
-      <h1 class="related"> movie budget $${movie.budget.toLocaleString()}</h1><br>
-      <h1 class="related"> revenue $${movie.revenue.toLocaleString()}</h1><br>
-    </div>
+      <div id="info">
+      <h1 class="related" class="related align-center">runtime ${movie.runtime} minutes</h1><br>
+      <h1 class="related" class="related align-center">release date ${movie.release_date}</h1><br>
+      <h1 class="related" class="related align-center"><a href="${movie.homepage}" target="_blank">Movie Homepage</a></h1><br>
+      <h1 class="related" class="related align-center"> movie budget $${movie.budget.toLocaleString()}</h1><br>
+      <h1 class="related" class="related align-center"> revenue $${movie.revenue.toLocaleString()}</h1><br>
+     </div>
+   
     
     <div id="u-tube">
     <iframe id="video" src="${u_tube}${playlist[0]}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>

@@ -334,8 +334,8 @@ justify-content: center;
 cursor: default;
 height: 100vh;
 min-height: 35em;
+overflow: hidden;
 overflow-y: auto;
-/* overflow: hidden; */
 position: relative;
 text-align: center;
 background-repeat: no-repeat;
